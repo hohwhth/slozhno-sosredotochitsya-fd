@@ -1,12 +1,46 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+   --bg-image: url('../images/cover-image-dark.png'); 
+   --bg-color: #000028;
+   --accent-color: #ff0070;
+   --accent-color-button-transparent: rgb(255, 0, 112, 0.4);
+   --heading-color: #db00ff;
+   --text-color: #f1b2ce;
+}
+
+.theme-dark .content-section__heading {
+  color: var(--accent-color);
+}
+
+.theme-dark .header__corner-item {
+  display: flex;
+}
+
+.theme-dark .decorated-zone::before {
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.theme-dark .decorated-zone::after {
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.theme-dark .header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.theme-dark .header__theme-menu-button:focus {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.theme-dark .header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.theme-dark .header__theme-menu-button:hover {
+  border: 1px solid var(--accent-color-button-transparent);
+}
+
+.theme-dark .title-decor {
+  color: var(--decor-color);
 }
